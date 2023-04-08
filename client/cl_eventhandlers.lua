@@ -32,7 +32,7 @@ end
 AddEventHandler('CEventShockingGunshotFired', function(witnesses, ped, coords)
     -- If AutoAlerts are disabled, don't trigger
     if not Config.Enable['Shooting'] then return end
-    local coords = vector3(coords[1][1], coords[1][2], coords[1][3])
+    local coords = vec3(coords[1][1], coords[1][2], coords[1][3])
     -- Use the timer to prevent the event from being triggered multiple times.
     if Config.Timer['Shooting'] ~= 0 then return end
     -- The ped that shot the gun must be the player.
@@ -74,7 +74,7 @@ for i = 1, #SpeedingEvents do
     AddEventHandler(event, function(witnesses, ped, coords)
         -- If AutoAlerts are disabled, don't trigger
         if not Config.Enable['Speeding'] then return end
-        local coords = vector3(coords[1][1], coords[1][2], coords[1][3])
+        local coords = vec3(coords[1][1], coords[1][2], coords[1][3])
         -- Use the timer to prevent the event from being triggered multiple times.
         if Config.Timer['Speeding'] ~= 0 then return end
         -- The ped that triggered the event must be the player.
@@ -109,7 +109,7 @@ end
 AddEventHandler('CEventShockingSeenMeleeAction', function(witnesses, attacker, coords)
     -- If AutoAlerts are disabled, don't trigger
     if not Config.Enable['Melee'] then return end
-    local coords = vector3(coords[1][1], coords[1][2], coords[1][3])
+    local coords = vec3(coords[1][1], coords[1][2], coords[1][3])
     -- Use the timer to prevent the event from being triggered multiple times.
     if Config.Timer['Melee'] ~= 0 then return end
     -- The ped that melee attacked must be the player.
@@ -153,7 +153,7 @@ end)
 AddEventHandler('CEventShockingCarAlarm', function(witnesses, thief, coords)
     -- If AutoAlerts are disabled, don't trigger
     if not Config.Enable['Autotheft'] then return end
-    local coords = vector3(coords[1][1], coords[1][2], coords[1][3])
+    local coords = vec3(coords[1][1], coords[1][2], coords[1][3])
     -- Use the timer to prevent the event from being triggered multiple times.
     if Config.Timer['Autotheft'] ~= 0 then return end
     -- The ped that melee attacked must be the player.

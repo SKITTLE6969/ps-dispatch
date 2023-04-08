@@ -58,7 +58,7 @@ end)
 
 if Config.Locations['hunting'][1] then
 	for _, hunting in pairs(Config.Locations["hunting"]) do
-		local huntingzone = CircleZone:Create(vector3(hunting.coords.x, hunting.coords.y, hunting.coords.z), hunting.radius, {
+		local huntingzone = CircleZone:Create(vec3(hunting.coords.x, hunting.coords.y, hunting.coords.z), hunting.radius, {
 			name = Config.Locations["hunting"].label,
 			useZ = true,
 			debugPoly = false
@@ -74,7 +74,7 @@ end
 
 if Config.Locations['NoDispatch'][1] then
 	for _, nodispatch in pairs(Config.Locations["NoDispatch"]) do
-		local nodispatchzone = BoxZone:Create(vector3(nodispatch.coords.x, nodispatch.coords.y, nodispatch.coords.z), nodispatch.length, nodispatch.width, {
+		local nodispatchzone = BoxZone:Create(vec3(nodispatch.coords.x, nodispatch.coords.y, nodispatch.coords.z), nodispatch.length, nodispatch.width, {
 			name = Config.Locations["NoDispatch"].label,
 			heading = nodispatch.heading,
 			minZ = nodispatch.minZ,

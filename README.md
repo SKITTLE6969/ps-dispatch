@@ -226,7 +226,7 @@ exports('SpeedingVehicle', SpeedingVehicle)
 # Custom Alert Handler
 ```lua
 exports["ps-dispatch"]:CustomAlert({
-    coords = vector3(0.0, 0.0, 0.0),
+    coords = vec3(0.0, 0.0, 0.0),
     message = "Criminal Activity",
     dispatchCode = "10-4 Rubber Ducky",
     description = "Blip Name here",
